@@ -1,0 +1,36 @@
+# FZF
+
+- `:Rg` - Open Ripgrep search popup
+- `:Files` - Open files popup
+- `:GFiles` - Open Git files popup
+- `:GFiles?` - Open Git files popup
+- `:Buffers` - Open Buffers popup
+- `:Colors` - Open colorschemes popup
+- `:Lines` - Open lines in loaded buffers popup
+- `:BLines` - Open lines in current buffer popup
+- `:Tags` - Open tags in the project popup
+- `:BTags` - Open tags in the buffer popup
+- `:Marks` - Open marks in the buffer popup
+- `:Windows` - Open windows popup
+- `:History` - Open recent files popup
+- `:History:` - Open command history popup
+- `:History/` - Open search history popup
+- `:Snippets` - Open snippets popup
+- `:Commits` - Open commits popup
+- `:BCommits` - Open current buffer commits history popup
+- `:Commands` - Open commands popup
+- `:Maps` - Open mappings popup
+- `:Helptags` - Open helptags popup
+- `:Filetypes` - Open file types popup
+
+- `:Definitions` - Show definition for the symbols under the cursor
+- `:Declarations` - *Show the declaration for the symbols under the cursor
+- `:TypeDefinitions` - *Show the type definition for the symbols under the cursor
+- `:Implementations` - *Show the implementation for the symbols under the cursor
+- `:References` - Show the references for the symbol under the cursor
+- `:DocumentSymbols` - Show all the symbols in the current buffer
+- `:WorkspaceSymbols` - Show all the symbols in the workspace
+- `:IncomingCalls` - Show the incoming calls
+- `:OutgoingCalls` - Show the outgoing calls
+- `:CodeActions` - Show the list of available code actions
+- `:Diagnostics` - Show the available diagnostic informations
