@@ -1,0 +1,17 @@
+{
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "global",
+          "all"
+        ],
+        "path": "snippets/global.json"
+      },
+      {
+        "language": "typescript",
+        "path": "snippets/typescript.json"
+      }
+    ]
+  }
+}

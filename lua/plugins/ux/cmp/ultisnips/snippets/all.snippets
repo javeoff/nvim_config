@@ -1,0 +1,98 @@
+snippet log
+console.log($1)
+endsnippet
+
+snippet elog
+// eslint-disable-next-line no-console
+console.log($1);
+endsnippet
+
+snippet useEffect
+useEffect(() => { 
+  $1
+}, [$2]);
+endsnippet
+
+snippet useMemo
+const $1 = useMemo(() => { 
+  $2
+}, [$3]);
+endsnippet
+
+snippet e
+export $1
+endsnippet
+
+snippet r
+return $1
+endsnippet
+
+snippet c
+const $1
+endsnippet
+
+snippet ca
+const $1 = await $2
+endsnippet
+
+snippet l
+let $1
+endsnippet
+
+snippet i
+if ($1) {
+  $0
+}
+endsnippet
+
+snippet ?
+$1 ? $2 : $3
+endsnippet
+
+snippet f
+($0) => {
+    $1
+}
+endsnippet
+
+snippet filter
+$1.filter(($2) => $3)
+endsnippet
+
+snippet find
+$1.find(($2) => $3)
+endsnippet
+
+snippet some
+$1.some(($2) => $3)
+endsnippet
+
+snippet every
+$1.every(($2) => $3)
+endsnippet
+
+snippet ok
+Object.keys($1)
+endsnippet
+
+snippet ov
+Object.values($1)
+endsnippet
+
+snippet oe
+Object.entries($1)
+endsnippet
+
+snippet oa
+Object.assign($1)
+endsnippet
+
+snippet p
+new Promise((resolve, reject) => {
+  $0
+})
+endsnippet
+
+snippet wait
+new Promise((resolve) => setTimeout(resolve, $1))
+endsnippet

@@ -1,0 +1,21 @@
+snippet int
+interface $1 {
+  $2
+}
+endsnippet
+
+snippet imt
+import { describe, test, expect } from 'bun:test';
+endsnippet
+
+snippet dd
+describe('$1', () => {
+  $2
+})
+endsnippet
+
+snippet tt
+test('$1', $2() => {
+  $3
+})
+endsnippet

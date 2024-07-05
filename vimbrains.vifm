@@ -1,0 +1,53 @@
+" automatically converted from Vim color scheme vimbrains
+
+highlight clear
+
+highlight Win guifg=#fce8c3 guibg=#1c1b19 gui=none
+highlight OtherWin guifg=#918175 ctermbg=-1 cterm=none
+" no conversion defined for AuxWin
+" no conversion defined for OddLine
+
+highlight TopLine guifg=#2d2c29 guibg=#1c1b19 gui=none
+highlight TopLineSel guifg=#fce8c3 guibg=#2d2c29 gui=none
+
+highlight TabLine guifg=#1c1b19 guibg=#1c1b19 gui=none
+highlight TabLineSel guifg=#1c1b19 guibg=#1c1b19 gui=bold
+
+highlight JobLine guifg=#fce8c3 guibg=#2d2c29 gui=none
+highlight StatusLine guifg=#fce8c3 guibg=#2d2c29 gui=none
+highlight Border guifg=#fce8c3 guibg=#1c1b19 gui=none
+
+highlight CurrLine guifg=#fce8c3 ctermbg=12 cterm=reverse
+highlight OtherLine guifg=#1c1b19 guibg=#fce8c3 gui=none
+highlight LineNr guifg=#918175 ctermbg=-1 cterm=none
+
+highlight Selected guifg=#fce8c3 guibg=#1c1b19 gui=reverse
+highlight CmpMismatch guifg=#6796bd guibg=#1c1b19 gui=reverse
+
+highlight SuggestBox guifg=#fce8c3 guibg=#1c1b19 gui=none
+highlight WildMenu guifg=#fce8c3 guibg=#2d2c29 gui=none
+
+highlight CmdLine guifg=#fce8c3 guibg=#1c1b19 gui=none
+highlight ErrorMsg guifg=#fce8c3 guibg=#ce7828 gui=none
+
+highlight Directory guifg=#ce7828 ctermbg=-1 cterm=none
+highlight Executable guifg=#ce7828 ctermbg=-1 cterm=none
+highlight Socket guifg=#fce8c3 ctermbg=-1 cterm=none
+highlight Device guifg=#fce8c3 ctermbg=-1 cterm=none
+highlight Fifo guifg=#698857 ctermbg=-1 cterm=none
+highlight Link guifg=#fbb829 ctermbg=-1 cterm=none
+highlight BrokenLink guifg=#fce8c3 guibg=#1c1b19 gui=bold
+" no conversion defined for HardLink
+
+" no conversion defined for User1..User9
+
+" warnings:
+" - incomplete source color scheme: missing bg of NonText
+" - incomplete source color scheme: missing bg of Cursor
+" - incomplete source color scheme: missing bg of LineNr
+" - incomplete source color scheme: missing bg of Keyword
+" - incomplete source color scheme: missing bg of Macro
+" - incomplete source color scheme: missing bg of Debug
+" - incomplete source color scheme: missing bg of Delimiter
+" - incomplete source color scheme: missing bg of String
+" - incomplete source color scheme: missing bg of Number
