@@ -15,7 +15,7 @@ git clone git@github.com:javeoff/nvim_config.git ~/.config/nvim
 - Macos
 
 ```
-wget -O install.sh https://raw.githubusercontent.com/javeoff/nvim_config/main/scripts/macos-install.sh
+curl -o install.sh https://raw.githubusercontent.com/javeoff/nvim_config/main/scripts/macos-install.sh
 chmod +x install.sh
 ./install.sh
 ```
