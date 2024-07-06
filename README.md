@@ -15,7 +15,7 @@ git clone git@github.com:javeoff/nvim_config.git ~/.config/nvim
 - Macos
 
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/javeoff/nvim_config/main/scripts/macos-install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/javeoff/nvim_config/main/scripts/macos-install.sh)"
 ```
 
 https://nvim-config.gitbook.io/docs
