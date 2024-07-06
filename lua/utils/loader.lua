@@ -32,7 +32,7 @@ F.join_tables = function(t1, t2)
 end
 
 F.load = function(enabled_plugins, disabled_plugins)
-  local lazypath = os.getenv('HOME') .. '/.nvim/lazy/lazy.nvim'
+  local lazypath = os.getenv('HOME') .. '/nvim/lazy/lazy.nvim'
 	if not vim.loop.fs_stat(lazypath) then
 		vim.fn.system({
 			"git",
@@ -51,7 +51,7 @@ F.load = function(enabled_plugins, disabled_plugins)
 	end
 
 	local opts = {
-		root = os.getenv('HOME') .. "/.nvim/plugins"
+		root = os.getenv('HOME') .. "/nvim/plugins"
 	}
 
 	require("lazy").setup(plugins, opts)
