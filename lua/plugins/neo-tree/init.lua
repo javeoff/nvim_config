@@ -8,15 +8,15 @@ return {
         "MunifTanjim/nui.nvim",
     },
     keys = {
-        { "so",    ":Neotree current git_status<CR>",                           desc = "Neotree git status" },
-        { "<M-m>", ":Neotree toggle<CR>",                                       desc = "Open Neotree menu" },
-        { "<M-e>", ":Neotree current<CR>",                                      desc = "Open Neotree menu in tab" },
-        { "sm",    ":Neotree reveal<CR>",                                       desc = "Find Neotree file in menu" },
-        { "sb",    ":Neotree position=current buffers<CR>",                     desc = "Open buffers in tab" },
-        { "se",    ":Neotree reveal current<CR>",                               desc = "Find Neotree file in split tab" },
-        { "sE",    ":Neotree position=current dir=%:p:h:h reveal_file=%:p<CR>", desc = "Open Neotree with parent from terminal" },
-        { "sh",    ":Neotree git_status dir=%:p:h<CR>",                         desc = "Open Neotree git status from terminal" },
-        { "sH",    ":Neotree dir=%:p:h:h reveal_file=%:p git_status<CR>",       desc = "Open Neotree git status from terminal" },
+        { "so",    ":Neotree current git_status<CR>" },
+        { "<M-m>", ":Neotree toggle<CR>" },
+        { "<M-e>", ":Neotree current<CR>" },
+        { "sm",    ":Neotree reveal<CR>" },
+        { "sb",    ":Neotree position=current buffers<CR>" },
+        { "se",    ":Neotree reveal current<CR>" },
+        { "sE",    ":Neotree position=current dir=%:p:h:h reveal_file=%:p<CR>" },
+        { "sh",    ":Neotree git_status dir=%:p:h<CR>" },
+        { "sH",    ":Neotree dir=%:p:h:h reveal_file=%:p git_status<CR>" },
     },
     opts = {
         close_if_last_window = false,
@@ -72,19 +72,18 @@ return {
             },
             file_size = {
                 enabled = true,
-                -- required_width = 64, -- min width of window required to show this column
             },
             type = {
                 enabled = true,
-                required_width = 122, -- min width of window required to show this column
+                required_width = 122,
             },
             last_modified = {
                 enabled = true,
-                required_width = 88, -- min width of window required to show this column
+                required_width = 88,
             },
             created = {
                 enabled = true,
-                required_width = 110, -- min width of window required to show this column
+                required_width = 110,
             },
             symlink_target = {
                 enabled = true,
