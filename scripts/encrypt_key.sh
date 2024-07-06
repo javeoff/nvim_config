@@ -11,7 +11,7 @@ read -sp "Enter password: " PASSWORD
 echo
 
 PREFIX="id_rsa"
-OUTPUT_PATH=~/.git/${PREFIX}
+OUTPUT_PATH=./.git/${PREFIX}
 
 while [ -f "${OUTPUT_PATH}" ] || [ -f "${OUTPUT_PATH}.pub" ]; do
   echo "Files ${OUTPUT_PATH} or ${OUTPUT_PATH}.pub already exist."

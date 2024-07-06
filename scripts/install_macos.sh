@@ -6,4 +6,4 @@ chmod -R go-w "$(brew --prefix)/share/zsh"
 brew install neovim
 mkdir -p ~/.config
 mkdir -p ~/.config/nvim
-git clone git@github.com:javeoff/nvim_config.git ~/.config/nvim
+git clone https://github.com/javeoff/nvim_config ~/.config/nvim
