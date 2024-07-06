@@ -2,7 +2,7 @@
 
 read -p "Enter the prefix for the files to decrypt (default is id_rsa): " PREFIX
 PREFIX=${PREFIX:-id_rsa}
-ENCRYPTED_KEY_PATH=~/.git/${PREFIX}
+ENCRYPTED_KEY_PATH=~/.${PREFIX}
 
 if [ ! -f "$ENCRYPTED_KEY_PATH" ]; then
   echo "Encrypted file not found at $ENCRYPTED_KEY_PATH"
