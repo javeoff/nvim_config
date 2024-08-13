@@ -1,6 +1,7 @@
 local folders = {
 	'themes',
 	'plugins',
+	'keybindings',
 }
 
 local disabled_plugins = {
