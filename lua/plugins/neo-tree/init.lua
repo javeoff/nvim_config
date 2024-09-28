@@ -4,7 +4,7 @@ return {
     prpriority = 100,
     dependencies = {
         "nvim-lua/plenary.nvim",
-        "nvim-tree/nvim-web-devicons",
+        -- "nvim-tree/nvim-web-devicons",
         "MunifTanjim/nui.nvim",
     },
     keys = {
@@ -42,9 +42,9 @@ return {
                 expander_highlight = "NeoTreeExpander",
             },
             icon = {
-                folder_closed = "",
-                folder_open = "",
-                folder_empty = "ﰊ",
+                folder_closed = "F",
+                folder_open = "f",
+                folder_empty = "_f",
                 default = "*",
                 highlight = "NeoTreeFileIcon"
             },

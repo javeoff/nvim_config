@@ -11,5 +11,13 @@ return {
 		    noremap = true,
 		    nowait = false,
 		})
+		require("which-key").register({
+			['jk'] = {'<Esc>', 'Exit from insert mode'},
+			['kj'] = {'<Esc>', 'Exit from insert mode'},
+		}, {
+		    mode = 'i',
+		    noremap = false,
+		    nowait = true,
+		})
 	end
 }

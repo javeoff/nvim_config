@@ -3,7 +3,8 @@ eval "$(homebrew/bin/brew shellenv)"
 brew update --force --quiet
 chmod -R go-w "$(brew --prefix)/share/zsh"
 
-brew install neovim
+mv ./lua/plugins/snippets/mock ~/snippetsbrew install neovim
+
 mkdir -p ~/.config
 mkdir -p ~/.config/nvim
 git clone https://github.com/javeoff/nvim_config ~/.config/nvim
