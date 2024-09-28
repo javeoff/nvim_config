@@ -92,6 +92,14 @@ vim.api.nvim_set_hl(0, 'DiagnosticHint', { fg = '#918175', ctermfg = 79, bold = 
 vim.api.nvim_set_hl(0, 'DiagnosticError', { fg = '#ff5900', ctermfg = 79, bold = false })
 vim.api.nvim_set_hl(0, 'DiagnosticWarn', { fg = '#d7af5f', ctermfg = 79, bold = false })
 vim.api.nvim_set_hl(0, 'DiagnosticInfo', { bg = '#fce9c3', fg = '#000000', ctermfg = 79, bold = false })
+vim.api.nvim_set_hl(
+    0,
+    'Normal',
+    { 
+        bg = '#000000',
+        ctermbg = 16,
+    }
+)
 
 --[[ vim.cmd('highlight Keyword guifg=#ff79c6')
 vim.cmd('highlight Type guifg=#bd93f9')
@@ -101,4 +109,3 @@ vim.cmd('highlight typescriptInterfaceKeyword guifg=#8A8842')
 vim.cmd('highlight @tstype guifg=#ff5500')
 vim.cmd('highlight tstype guifg=#ff0000') ]]
 
-vim.cmd('colorscheme vimbrains');
