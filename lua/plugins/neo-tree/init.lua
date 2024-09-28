@@ -37,8 +37,8 @@ return {
                 last_indent_marker = "└",
                 highlight = "NeoTreeIndentMarker",
                 with_expanders = nil,
-                expander_collapsed = "",
-                expander_expanded = "",
+                expander_collapsed = "f",
+                expander_expanded = "F",
                 expander_highlight = "NeoTreeExpander",
             },
             icon = {
@@ -46,7 +46,6 @@ return {
                 folder_open = "f",
                 folder_empty = "_f",
                 default = "*",
-                highlight = "NeoTreeFileIcon"
             },
             modified = {
                 symbol = "[+]",
@@ -158,7 +157,12 @@ return {
                 never_show_by_pattern = {
                 },
             },
-            follow_current_file = false,
+	    components = {
+		icon = function(config, node, state)
+		    if node.type == 'file' then return {} end
+		    return require('neo-tree.sources.common.components').icon(config, node, state)
+		end,
+	    },
             group_empty_dirs = false,
             hijack_netrw_behavior = "open_default",
             use_libuv_file_watcher = false,
@@ -177,7 +181,6 @@ return {
             }
         },
         buffers = {
-            follow_current_file = true,
             group_empty_dirs = true,
             show_unloaded = true,
             window = {

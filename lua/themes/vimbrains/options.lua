@@ -1,6 +1,3 @@
-vim.cmd('colorscheme vimbrains');
-vim.cmd('highlight Normal guibg=None');
-
 vim.api.nvim_set_hl(
     0,
     'Identifier',
@@ -103,3 +100,5 @@ vim.cmd('highlight typescriptInterfaceName guifg=#8A8842')
 vim.cmd('highlight typescriptInterfaceKeyword guifg=#8A8842')
 vim.cmd('highlight @tstype guifg=#ff5500')
 vim.cmd('highlight tstype guifg=#ff0000') ]]
+
+vim.cmd('colorscheme vimbrains');

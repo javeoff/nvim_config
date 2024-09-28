@@ -5,7 +5,8 @@ local folders = {
 }
 
 local disabled_plugins = {
-	'sonokai'
+	'sonokai',
+	-- 'vimbrains'
 }
 
 require('utils/loader').load(folders, disabled_plugins)
