@@ -1,6 +1,7 @@
 return {
     'neovim/nvim-lspconfig',
     dependencies = {
+				'yioneko/nvim-vtsls',
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/nvim-cmp',
         'b0o/schemastore.nvim',

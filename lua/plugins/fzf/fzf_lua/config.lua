@@ -11,8 +11,6 @@ remap('n', '<space>m', '<cmd>lua require("fzf-lua").marks()<CR>', opts)
 remap('n', '<space>t', '<cmd>lua require("fzf-lua").tabs()<CR>', opts)
 -- c-f (fzf) namespaced
 remap('n', '<C-f>f', '<cmd>lua require("fzf-lua").files()<CR>', opts)
-remap('n', 'sf', '<cmd>lua require("fzf-lua").files()<CR>', opts)
-remap('n', 'sg', '<cmd>lua require("fzf-lua").live_grep()<CR>', opts)
 remap('n', '<C-f><C-f>', '<cmd>lua require("fzf-lua").files({ fzf_opts = { [\'--height\'] = \"100%\" }, winopts = { win_height = 1 } })<CR>', opts)
 remap('c', '<C-f>c', '<cmd>lua require("fzf-lua").command_history()<CR><CR>', opts)
 remap('n', "<C-f>'", '<cmd>lua require("fzf-lua").buffers()<CR>', opts)

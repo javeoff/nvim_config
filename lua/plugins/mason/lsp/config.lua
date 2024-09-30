@@ -21,7 +21,6 @@ require("mason-lspconfig").setup {
 
 				-- Javascript
 				'quick_lint_js',
-				'tsserver',
 				'vtsls',
 
 				-- Web
