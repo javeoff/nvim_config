@@ -16,7 +16,7 @@ require('which-key').add({
   -- { "sl2", ":lua vim.lsp.buf.format()<cr>tsserver", desc = "TSServer Formatting", mode = "n" },
   -- { "sl3", ":lua vim.lsp.buf.format()<cr>diagnosticls", desc = "Diagnostic-LS Formatting", mode = "n" },
   -- { "sl4", ":lua vim.lsp.buf.format()<cr>null-ls", desc = "Null-LS Formatting", mode = "n" },
-  -- { "sl<tab>", ":lua vim.diagnostic.open_float(0, {scope=\"line\"})<cr>", desc = "Show Diagnostic Popup", mode = "n" },
+  { "sl<tab>", ":lua vim.diagnostic.open_float(0, {scope=\"line\"})<cr>", desc = "Show Diagnostic Popup", mode = "n" },
   -- { "sls", ":lua vim.lsp.buf.signature_help()<cr>", desc = "Show Signature Help", mode = "n" },
   -- { "sl]", ":lua require\"illuminate\".next_reference{wrap=true}<cr><cr>", desc = "Next Highlighted Reference", mode = "n" },
   -- { "sl[", ":lua require\"illuminate\".next_reference{reverse=true,wrap=true}<cr><cr>", desc = "Previous Highlighted Reference", mode = "n" },
