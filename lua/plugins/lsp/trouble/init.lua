@@ -1,6 +1,6 @@
 return {
     'folke/trouble.nvim',
-		dependencies = { "nvim-tree/nvim-web-devicons" },
+		-- dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require('plugins/lsp/trouble/keybindings')
 			require('trouble').setup({

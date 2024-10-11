@@ -141,14 +141,16 @@ return {
 			{ "§4",       ":GpChatNew<cr>:GpAgent ChatGPT4<cr>", desc = "Start GPT chat",       mode = "n" },
 			{ "§p",       ":GpAppend<cr>",                       desc = "Append to GPT prompt", mode = "n" },
 			{ "§<Enter>", ":GpChatRespond<cr>",                  desc = "",                     mode = "n" },
+			{ "§c", "ggVG:GpRewrite remove comments<cr>",                                        desc = "Rewrite by GPT", mode = "n" },
+			{ "§r", "ggVG:GpRewrite<cr>",                                                         desc = "Rewrite by GPT", mode = "n" },
 		})
 
 		require('which-key').add({
-			{ "§c", ":GpRewrite<cr>",                                                         desc = "Rewrite by GPT", mode = "v" },
+			{ "§r", ":GpRewrite<cr>",                                                         desc = "Rewrite by GPT", mode = "v" },
 			{ "§i", ":GpVnew<cr>",                                                            desc = "Rewrite by GPT", mode = "v" },
 			{ "§v", ":GpCodeReview<cr>",                                                      desc = "Rewrite by GPT", mode = "v" },
 			{ "§e", ":GpRewrite translate from russian to english or english to russian<cr>", desc = "Rewrite by GPT", mode = "v" },
-			{ "§r", ":GpRewrite fix current code<cr>",                                        desc = "Rewrite by GPT", mode = "v" },
+			{ "§f", ":GpRewrite fix current code<cr>",                                        desc = "Rewrite by GPT", mode = "v" },
 			{ "§t", ":GpUnitTests<cr>",                                                       desc = "Generate tests", mode = "v" },
 			{ "§h", ":GpChatPaste<cr>i",                                                      desc = "Generate tests", mode = "v" },
 		})

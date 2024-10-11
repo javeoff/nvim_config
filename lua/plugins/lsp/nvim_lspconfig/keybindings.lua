@@ -12,7 +12,7 @@ require('which-key').add({
   -- { "slm", ":lua vim.lsp.buf.implementation()<cr>", desc = "Go to Implementation", mode = "n" },
   -- { "sle", ":EslintFixAll<cr>", desc = "Eslint Fix", mode = "n" },
   { "slf", ":lua vim.lsp.buf.format()<cr>", desc = "Show Formatting Popup", mode = "n" },
-  -- { "sl1", ":EslintFixAll<cr>", desc = "ESLint Formatting", mode = "n" },
+  { "sl1", ":EslintFixAll<cr>", desc = "ESLint Formatting", mode = "n" },
   -- { "sl2", ":lua vim.lsp.buf.format()<cr>tsserver", desc = "TSServer Formatting", mode = "n" },
   -- { "sl3", ":lua vim.lsp.buf.format()<cr>diagnosticls", desc = "Diagnostic-LS Formatting", mode = "n" },
   -- { "sl4", ":lua vim.lsp.buf.format()<cr>null-ls", desc = "Null-LS Formatting", mode = "n" },
