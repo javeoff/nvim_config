@@ -93,6 +93,35 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/javeoff/nvim_config/main
 - `ska` - Show the list of available code actions
 - `skf` - Show the available diagnostic informations
 
+### Additional Keybindings
+
+#### General Keybindings
+
+- `s=` - Split window
+- `sw` - Save buffer
+- `sq` - Quit
+- `sa` - Quit all
+- `<Tab>l` - Move to the right window
+- `<Tab>k` - Move to the top window
+- `<Tab>j` - Move to the bottom window
+- `<Tab>h` - Move to the left window
+- `vaa` - Select all
+- `U` - Redo
+- `jk` - Exit from insert mode
+- `kj` - Exit from insert mode
+
+#### DAP Keybindings
+
+- `sd<Tab>` - Dap Hover
+- `sd<Space>` - Dap Scopes
+- `sdt` - Open vsplit logs
+- `sdm` - Toggle dapui
+
+#### File Outline Keybindings
+
+- `sn` - Toggle file outline
+- `z<Tab>` - Set fold level to the first level
+
 ## Documentation
 
 https://nvim-config.gitbook.io/docs
