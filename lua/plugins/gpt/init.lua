@@ -96,8 +96,10 @@ return {
 					local template = "I have the following code from {{filename}}:\n\n"
 							.. "```{{filetype}}\n{{selection}}\n```\n\n"
 							.. "Please analyze for code smells and suggest improvements like Senior typescript engineer. Explain in russian."
-					local agent = gp.get_chat_agent()
-					gp.Prompt(params, gp.Target.tabnew("markdown"), nil, agent.model, template, agent.system_prompt)
+					-- local agent = gp.get_chat_agent()
+					-- gp.Prompt(params, gp.Target.tabnew("markdown"), nil, agent.model, template, agent.system_prompt)
+					local agent = gp.get_command_agent()
+					gp.Prompt(params, gp.Target.vnew, agent, template)
 				end,
 				Wrong = function(gp, params)
 					local template = "I have the following code from {{filename}}:\n\n"
@@ -110,7 +112,8 @@ return {
 					-- call GpChatNew command in range mode on whole buffer
 					vim.api.nvim_command("%" .. gp.config.cmd_prefix .. "ChatPaste")
 					vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc><Esc>", true, false, true), 'n', false)
-					vim.api.nvim_put({"Whats wrong with this code? Respond like Senior typescript engineer. Explain in russian"}, "l", false, true)
+					vim.api.nvim_put({ "Whats wrong with this code? Respond like Senior typescript engineer. Explain in russian" },
+						"l", false, true)
 					vim.api.nvim_command("GpChatRespond")
 				end,
 				APIDoc = function(gp, params)
@@ -126,29 +129,28 @@ return {
 					local template = "I have the following code from {{filename}}:\n\n"
 							.. "```{{filetype}}\n{{selection}}\n```\n\n"
 							.. "Please respond by writing Typedoc documentation for the code above.\n\n"
-							-- .. "\n\nFor function and methods provide just declaration - no word description necessary."
+					-- .. "\n\nFor function and methods provide just declaration - no word description necessary."
 					gp.Prompt(params, gp.Target.enew, nil, gp.config.command_model, template, gp.config.command_system_prompt)
 				end,
 			}
 		})
 		require('which-key').add({
-		  { "c<Tab>", ":GpChatFinder<cr>", desc = "Find GPT chat", mode = "n" },
-		  { "c4", ":GpChatNew<cr>:GpAgent ChatGPT4<cr>", desc = "Create GPT-4 chat", mode = "n" },
-		  { "c3", ":GpChatNew<cr>", desc = "Create GPT-4 chat", mode = "n" },
-		  { "cc", ":GpChatNew<cr>:GpAgent ChatGPT4<cr>", desc = "Start GPT chat", mode = "n" },
-		  { "=+", ":GpAppend<cr>", desc = "Append to GPT prompt", mode = "n" },
-		  { "§", ":GpChatRespond<cr>", desc = "", mode = "n" },
+			{ "§§",       ":GpChatFinder<cr>",                   desc = "Find GPT chat",        mode = "n" },
+			{ "§n",       ":GpChatNew<cr>:GpAgent ChatGPT4<cr>", desc = "Create GPT-4 chat",    mode = "n" },
+			{ "§3",       ":GpChatNew<cr>",                      desc = "Create GPT-4 chat",    mode = "n" },
+			{ "§4",       ":GpChatNew<cr>:GpAgent ChatGPT4<cr>", desc = "Start GPT chat",       mode = "n" },
+			{ "§p",       ":GpAppend<cr>",                       desc = "Append to GPT prompt", mode = "n" },
+			{ "§<Enter>", ":GpChatRespond<cr>",                  desc = "",                     mode = "n" },
 		})
 
 		require('which-key').add({
-		  { "-", ":GpRewrite<cr>", desc = "Rewrite by GPT", mode = "v" },
-		  { "_", ":GpVnew<cr>", desc = "Rewrite by GPT", mode = "v" },
-		  { "+", ":GpCodeReview<cr>", desc = "Rewrite by GPT", mode = "v" },
-		  { "ctr", ":GpRewrite translate from russian to english or english to russian<cr>", desc = "Rewrite by GPT", mode = "v" },
-		  { "=x", ":GpRewrite fix current code<cr>", desc = "Rewrite by GPT", mode = "v" },
-		  { "=t", ":GpUnitTests<cr>", desc = "Generate tests", mode = "v" },
-		  { "=e", ":GpChatPaste<cr>i", desc = "Generate tests", mode = "v" },
+			{ "§c", ":GpRewrite<cr>",                                                         desc = "Rewrite by GPT", mode = "v" },
+			{ "§i", ":GpVnew<cr>",                                                            desc = "Rewrite by GPT", mode = "v" },
+			{ "§v", ":GpCodeReview<cr>",                                                      desc = "Rewrite by GPT", mode = "v" },
+			{ "§e", ":GpRewrite translate from russian to english or english to russian<cr>", desc = "Rewrite by GPT", mode = "v" },
+			{ "§r", ":GpRewrite fix current code<cr>",                                        desc = "Rewrite by GPT", mode = "v" },
+			{ "§t", ":GpUnitTests<cr>",                                                       desc = "Generate tests", mode = "v" },
+			{ "§h", ":GpChatPaste<cr>i",                                                      desc = "Generate tests", mode = "v" },
 		})
-
 	end,
 }

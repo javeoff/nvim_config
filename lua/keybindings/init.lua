@@ -10,13 +10,13 @@ return {
 			{ "<Tab>k", "<C-w>k", mode = "n" },
 			{ "<Tab>j", "<C-w>j", mode = "n" },
 			{ "<Tab>h", "<C-w>h", mode = "n" },
+			{ "vaa", "ggVG", desc = "Select all", mode = "n" },
+			{ "U", ":redo<cr>", desc = "Redo", mode = "n" },
 		})
 
 		require('which-key').add({
 			{ "jk", "<Esc>", desc = "Exit from insert mode", mode = "i" },
 			{ "kj", "<Esc>", desc = "Exit from insert mode", mode = "i" },
-			{ "jk", "<Esc>", desc = "Exit from insert mode", mode = "v" },
-			{ "kj", "<Esc>", desc = "Exit from insert mode", mode = "v" },
 		})
 
 	end

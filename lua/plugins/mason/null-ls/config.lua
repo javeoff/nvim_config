@@ -7,7 +7,7 @@ require("mason-null-ls").setup({
 
         -- Markdown
         --'alex',
-        -- 'markdownlint',
+        'markdownlint',
         --'write_good',
 
         -- Sh

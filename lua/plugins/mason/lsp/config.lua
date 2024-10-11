@@ -12,6 +12,7 @@ require("mason-lspconfig").setup {
 			'unocss',
 			'marksman',
 			'quick_lint_js',
+			'prosemd_lsp',
 				--[[ 'solang', -- Solana
 				'mdx_analyzer', -- MDX
 				'rust_analyzer', -- Rust
@@ -42,7 +43,6 @@ require("mason-lspconfig").setup {
 
 				-- Markdown
 				'marksman',
-				'prosemd_lsp',
 				'remark_ls',
 				'zk',
 

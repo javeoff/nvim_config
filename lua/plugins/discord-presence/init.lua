@@ -1,6 +1,7 @@
 return {
     'IogaMaster/neocord',
     event = "VeryLazy",
+		enabled = false,
     config = function()
 	    require("neocord").setup({
 		    -- General options

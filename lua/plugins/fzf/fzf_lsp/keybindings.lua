@@ -10,7 +10,8 @@ require("which-key").add({
   { "sko", ":OutgoingCalls<CR>", desc = "Show the outgoing calls", mode = "n" },
   { "ska", ":CodeActions<CR>", desc = "Show the list of available code actions", mode = "n" },
   { "skf", ":Diagnostics<CR>", desc = "Show the available diagnostic informations", mode = "n" },
-  { "ss", ":GitFiles<CR>", desc = "Show git files", mode = "n" }
+  { "ss", ":GitFiles<CR>", desc = "Show git files", mode = "n" },
+  { ":", ":Commands<CR>", desc = "Show git files", mode = "n" }
 })
 
 require("which-key").add({

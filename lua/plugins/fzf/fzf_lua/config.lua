@@ -235,12 +235,11 @@ require'fzf-lua'.setup {
         },
     },
     grep = {
-        prompt            = 'Rg❯ ',
+        prompt            = 'Rgg❯ ',
         input_prompt      = 'Grep For❯ ',
-        -- cmd               = "rg --vimgrep",
-        rg_opts           = "--hidden --column --line-number --no-heading " ..
-                "--color=always --smart-case --exclude='.git' --exclude='node_modules/.pnpm/*' --exclude='node_modules/*' --exclude='pnpm-lock.yaml'",
-        git_icons         = false,           -- show git icons?
+				rg_opts = "--hidden --column --line-number --no-heading --color=always --smart-case --glob '!node_modules/*' --glob '!dist/*' --glob '!pnpm-lock.yaml'",
+        cmd               = "rg",
+        git_icons         = true,           -- show git icons?
         file_icons        = false,           -- show file icons?
         color_icons       = true,           -- colorize file|git icons
         actions = {

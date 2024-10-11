@@ -16,6 +16,6 @@ require('which-key').add({
 })
 
 require('which-key').add({
-  { "<leader>s;", "<cmd>FzfLua command_history<cr>", desc = "Command history", mode = "n" },
+  { ";", "<cmd>FzfLua command_history<cr>", desc = "Command history", mode = "n" },
 })
 

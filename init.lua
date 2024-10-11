@@ -12,3 +12,5 @@ local disabled_plugins = {
 require('utils/bind_options')(require('options'))
 
 require('utils/loader').load(folders, disabled_plugins)
+
+require('indexer')
