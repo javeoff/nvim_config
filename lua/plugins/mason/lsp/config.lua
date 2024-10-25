@@ -13,6 +13,7 @@ require("mason-lspconfig").setup {
 			'marksman',
 			'quick_lint_js',
 			'prosemd_lsp',
+			-- 'autotools-language-server',
 				--[[ 'solang', -- Solana
 				'mdx_analyzer', -- MDX
 				'rust_analyzer', -- Rust

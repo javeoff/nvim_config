@@ -1,9 +1,11 @@
 return {
     cmdheight = 0;
+		laststatus = 0;
     termguicolors = true;
     tabstop = 2;
     autoindent = true;
-    number = true;
+    number = false;
+		nonumber = true;
     nowrap = true;
     linebreak = true;
     shiftwidth = 2;
@@ -14,8 +16,6 @@ return {
     wildignorecase = true;
     wildignore     = ".git/**,.hg,.svn,*.pyc,*.o,*.out,*.jpg,*.jpeg,*.png,*.gif,*.zip,**/tmp/**,*.DS_Store,**/node_modules/**,**/bower_modules/**";
     splitright = true,
-
--- 	cursorline = false;
     modeline = true;
     modelineexpr = true;
     modelines = 4;

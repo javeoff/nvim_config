@@ -9,7 +9,8 @@ return {
 
     default = '#282b34',
     active   = '#bcc2ce',
-    bg       = '#000000',
+    -- bg       = '#000000',
+    bg       = 'NONE',
     fg       = '#bbc2cf',
     dark     = '#141414',
     cyan     = '#008080',

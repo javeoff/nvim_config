@@ -3,7 +3,7 @@ return {
 	config = function()
 		require('gp').setup({
 			openai_api_key = os.getenv("OPENAI_API_KEY"),
-			chat_assistant_prefix = { "🤖:", "[{{agent}}]" },
+			chat_assistant_prefix = { "AI:", "[{{agent}}]" },
 			chat_topic_gen_model = "gpt-4",
 			agents = {
 				{
@@ -139,8 +139,9 @@ return {
 			{ "§n",       ":GpChatNew<cr>:GpAgent ChatGPT4<cr>", desc = "Create GPT-4 chat",    mode = "n" },
 			{ "§3",       ":GpChatNew<cr>",                      desc = "Create GPT-4 chat",    mode = "n" },
 			{ "§4",       ":GpChatNew<cr>:GpAgent ChatGPT4<cr>", desc = "Start GPT chat",       mode = "n" },
-			{ "§p",       ":GpAppend<cr>",                       desc = "Append to GPT prompt", mode = "n" },
-			{ "§<Enter>", ":GpChatRespond<cr>",                  desc = "",                     mode = "n" },
+			{ "§=",       ":GpAppend<cr>",                       desc = "Append to GPT prompt", mode = "n" },
+			{ "§p",       ":GpPopup<cr>",                       desc = "Append to GPT prompt", mode = "n" },
+			{ "<Space><Space>", ":GpChatRespond<cr>",                  desc = "",                     mode = "n" },
 			{ "§c", "ggVG:GpRewrite remove comments<cr>",                                        desc = "Rewrite by GPT", mode = "n" },
 			{ "§r", "ggVG:GpRewrite<cr>",                                                         desc = "Rewrite by GPT", mode = "n" },
 		})

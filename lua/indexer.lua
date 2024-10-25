@@ -92,10 +92,10 @@ end
 vim.api.nvim_create_user_command("IndexWords", index_project, {})
 vim.api.nvim_create_user_command("IndexWord", grep_current_word, {})
 
-require('which-key').add({
-	{ ".", ":IndexWord<CR>", desc = "Search word in project" },
-	{ "s;", ":IndexWords<CR>", desc = "Search words in project" },
-})
+-- require('which-key').add({
+-- 	{ ".", ":IndexWord<CR>", desc = "Search word in project" },
+-- 	{ "s;", ":IndexWords<CR>", desc = "Search words in project" },
+-- })
 
 return M
 
