@@ -64,7 +64,6 @@ P.setup = function(on_attach, capabilities)
           css = 'prettier',
           javascript = 'eslint_d',
           javascriptreact = 'eslint_d',
-          json = 'prettier',
           scss = 'prettier',
           less = 'prettier',
           typescript = 'eslint_d',

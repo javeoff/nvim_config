@@ -23,7 +23,7 @@ require('which-key').add({
 })
 
 require('which-key').add({
-  { "si", "<cmd>BLines<cr>", desc = "Open lines in current buffer popup", mode = "n" },
+  -- { "si", "<cmd>BLines<cr>", desc = "Open lines in current buffer popup", mode = "n" },
   { "sp", "<cmd>Snippets<cr>", desc = "Open snippets popup", mode = "n" },
 })
 

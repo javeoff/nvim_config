@@ -1,7 +1,7 @@
 -- vim.cmd('highlight TabLine guibg='.. colors.bg ..' guifg=' .. colors.fg .. '')
--- vim.cmd('highlight TabLineSel guibg=' .. colors.dark .. ' guifg=' .. colors.fg .. '')
+-- vim.cmd('highlight TabLineSel guibg=#ff5500 guifg=#ffffff')
 -- vim.cmd('highlight TabLineFill guibg=default guifg=' .. colors.fg .. '')
-
+ 
 vim.api.nvim_create_autocmd(
   { "VimEnter", "BufNew", "BufReadPost", "BufDelete", "BufWipeout" },
   {
@@ -20,13 +20,12 @@ vim.api.nvim_create_autocmd(
         end
         print(getCount())
 
-        if getCount() <= 1 then
+        -- if getCount() <= 1 then
           vim.cmd("set showtabline=0")
-        else
-          vim.cmd("set showtabline=2")
-        end
+        -- else
+        --   vim.cmd("set showtabline=2")
+        -- end
       end, 1)
-			vim.cmd("set showtabline=0")
     end,
   }
 )

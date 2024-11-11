@@ -1,5 +1,6 @@
 return {
 	'Robitx/gp.nvim',
+	enabled = true,
 	config = function()
 		require('gp').setup({
 			openai_api_key = os.getenv("OPENAI_API_KEY"),
@@ -135,13 +136,13 @@ return {
 			}
 		})
 		require('which-key').add({
-			{ "§§",       ":GpChatFinder<cr>",                   desc = "Find GPT chat",        mode = "n" },
+			{ "§§",       ":GpChatFinder<cr><Esc>",                   desc = "Find GPT chat",        mode = "n" },
 			{ "§n",       ":GpChatNew<cr>:GpAgent ChatGPT4<cr>", desc = "Create GPT-4 chat",    mode = "n" },
 			{ "§3",       ":GpChatNew<cr>",                      desc = "Create GPT-4 chat",    mode = "n" },
 			{ "§4",       ":GpChatNew<cr>:GpAgent ChatGPT4<cr>", desc = "Start GPT chat",       mode = "n" },
 			{ "§=",       ":GpAppend<cr>",                       desc = "Append to GPT prompt", mode = "n" },
 			{ "§p",       ":GpPopup<cr>",                       desc = "Append to GPT prompt", mode = "n" },
-			{ "<Space><Space>", ":GpChatRespond<cr>",                  desc = "",                     mode = "n" },
+			{ "§m", ":GpChatRespond<cr>",                  desc = "",                     mode = "n" },
 			{ "§c", "ggVG:GpRewrite remove comments<cr>",                                        desc = "Rewrite by GPT", mode = "n" },
 			{ "§r", "ggVG:GpRewrite<cr>",                                                         desc = "Rewrite by GPT", mode = "n" },
 		})

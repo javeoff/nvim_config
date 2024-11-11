@@ -15,7 +15,7 @@ return {
         { "sb",    ":Neotree position=current buffers<CR><CR>" },
         { "se",    ":Neotree reveal current<CR>" },
         { "se",    ":Neotree reveal current<CR>" },
-        { "sE",    ":Neotree position=current dir=%:p:h:h reveal_file=%:p<CR>" },
+        { "ss",    ":Neotree position=current dir=%:p:h:h reveal_file=%:p<CR><CR>" },
         { "sh",    ":Neotree git_status dir=%:p:h<CR>" },
         { "sH",    ":Neotree dir=%:p:h:h reveal_file=%:p git_status<CR>" },
     },

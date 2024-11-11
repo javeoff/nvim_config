@@ -6,7 +6,8 @@ local folders = {
 
 local disabled_plugins = {
 	'sonokai',
-	-- 'vimbrains'
+	'vimbrains',
+	-- 'matrix',
 }
 
 require('utils/bind_options')(require('options'))

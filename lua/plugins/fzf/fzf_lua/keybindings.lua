@@ -13,6 +13,7 @@ require('which-key').add({
   { "sj", "<cmd>FzfLua jumps<cr>", desc = "Jumps", mode = "n" },
   { "slr", "<cmd>lua require('fzf-lua').lsp_references({ winopts = { preview = { hidden = 'nohidden', border = 'border' }}})<cr>", desc = "LSP References", mode = "n" },
   { "s/", "<cmd>FzfLua resume<cr>", desc = "Resume fzf-lua filter", mode = "n" },
+  { "si", "<cmd>FzfLua blines<cr>", desc = "Lines in loaded buffers", mode = "n" },
 })
 
 require('which-key').add({
