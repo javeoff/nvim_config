@@ -3,8 +3,8 @@ return {
 	dependencies = "vim-denops/denops.vim",
 	enabled = true,
 	config = function()
-		vim.g.aider_command = 'aider --no-auto-commits'
-		vim.g.aider_buffer_open_type = 'floating'
+		vim.g.aider_command = 'aider'
+		vim.g.aider_buffer_open_type = 'tab'
 		vim.g.aider_floatwin_width = 100
 		vim.g.aider_floatwin_height = 20
 
@@ -19,6 +19,8 @@ return {
 			})
 		vim.api.nvim_set_keymap('n', '§<Enter>', ':Aider<CR>', { noremap = true, silent = true })
 		vim.api.nvim_set_keymap('n', '§p', ':AiderRun<CR>i', { noremap = true, silent = true })
+		vim.api.nvim_set_keymap('n', '§v', ':AiderSilentAddCurrentFile<CR>:AiderVoice<CR>', { noremap = true, silent = false })
+		vim.api.nvim_set_keymap('n', '§.', ':AiderSilentAddCurrentFile<CR><CR>:AiderSilentSendPromptByCommandline "/model openrouter/meta-llama/llama-3-8b-instruct:free"<CR>:AiderVoice<CR>', { noremap = true, silent = false })
 		vim.api.nvim_set_keymap('n', '§o', ':AiderAddCurrentFile<CR>i', { noremap = true, silent = true })
 		vim.api.nvim_set_keymap('n', '§c', ':AiderToggleCodeMode<CR>i', { noremap = true, silent = true })
 		-- vim.api.nvim_set_keymap('n', '§ar', ':AiderAddCurrentFileReadOnly<CR>', { noremap = true, silent = true })
