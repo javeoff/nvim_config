@@ -8,7 +8,6 @@ return {
 	config = function()
 		require('aerial').setup({
 			backends = { "treesitter", "lsp", "markdown", "man" },
-			-- close_automatic_events = "unfocus",
 			link_tree_to_folds = false,
 			link_folds_to_tree = false,
 			keymaps = {
@@ -34,18 +33,13 @@ return {
 				"Struct",
 			},
 		})
-		-- vim.o.foldlevelstart = 1
 		vim.o.foldlevel = 1
 		require('plugins/file_outline/keybindings')
-		-- require('aerial').tree_set_collapse_level(vim.api.nvim_get_current_buf(), 1)
-		-- require('aerial').tree_set_collapse_level(0, 1)
 		local packer_aerial = vim.api.nvim_create_augroup("packer aerial symbols", {})
 		vim.api.nvim_create_autocmd("BufEnter", {
-			desc = "set Aerial symbols collapse limit for plugins/init.lua",
 			group = packer_aerial,
 			pattern = {
 				"*"
-				-- vim.fn.glob("~/.config/nvim/lua/axie/plugins/init.lua"),
 			},
 			callback = function()
 				local bufnr = vim.api.nvim_get_current_buf()
