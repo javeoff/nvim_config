@@ -1,4 +1,4 @@
-return {
+{
     { "§§",       ":GpChatFinder<cr><Esc>",                   desc = "Find GPT chat",        mode = "n" },
     { "§n",       ":GpChatNew<cr>:GpAgent ChatGPT4<cr>", desc = "Create GPT-4 chat",    mode = "n" },
     { "§3",       ":GpChatNew<cr>",                      desc = "Create GPT-4 chat",    mode = "n" },
