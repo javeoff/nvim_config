@@ -11,7 +11,7 @@ vim.api.nvim_create_autocmd('User',
     })
 
 local aider_mappings = {
-    ["§"] = {
+    ["<leader>a"] = {
         name = "Aider",
         ["<CR>"] = { ":AiderRun<CR>i", "Run Aider" },
         ["v"] = { ":AiderSilentAddCurrentFile<CR>:AiderVoice<CR>", "Add current file (silent)" },
@@ -24,4 +24,4 @@ local aider_mappings = {
     }
 }
 
-wk.register(aider_mappings, { prefix = "" })
+wk.register(aider_mappings, { prefix = "<leader>a" })
