@@ -7,7 +7,6 @@ return {
         require('plugins/fzf/fzf_vim/config')
         require('plugins/fzf/fzf_vim/keybindings')
 
-        -- Добавляем список команд с кастомными названиями
         local commands = {
             {
                 name = "Gemini",
@@ -62,6 +61,6 @@ return {
                     vim.cmd(choice.command)
                 end
             end)
-        end, { desc = "Выбрать команду" })
+        end, { desc = "Select model" })
     end
 }
