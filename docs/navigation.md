@@ -19,5 +19,3 @@
 - `so` - Git status files
 - `sh` - Open Neotree git status float from current path
 - `sH` - Open Neotree git status float from project path
-
-## Commands
