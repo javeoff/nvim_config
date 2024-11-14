@@ -10,11 +10,12 @@ local disabled_plugins = {
 	-- 'matrix',
 }
 
-require('utils/bind_options')(require('options'))
 
 require('utils/loader').load(folders, disabled_plugins)
 
 require('indexer')
+
+require('utils/bind_options')(require('options'))
 
 vim.defer_fn(function()
 	vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
