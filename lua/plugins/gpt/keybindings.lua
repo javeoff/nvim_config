@@ -1,0 +1,17 @@
+return {
+    { "§§",       ":GpChatFinder<cr><Esc>",                   desc = "Find GPT chat",        mode = "n" },
+    { "§n",       ":GpChatNew<cr>:GpAgent ChatGPT4<cr>", desc = "Create GPT-4 chat",    mode = "n" },
+    { "§3",       ":GpChatNew<cr>",                      desc = "Create GPT-4 chat",    mode = "n" },
+    { "§4",       ":GpChatNew<cr>:GpAgent ChatGPT4<cr>", desc = "Start GPT chat",       mode = "n" },
+    { "§=",       ":GpAppend<cr>",                       desc = "Append to GPT prompt", mode = "n" },
+    { "§p",       ":GpPopup<cr>",                       desc = "Append to GPT prompt", mode = "n" },
+    { "§m", ":GpChatRespond<cr>",                  desc = "",                     mode = "n" },
+    { "§c", "ggVG:GpRewrite remove comments<cr>",                                        desc = "Rewrite by GPT", mode = "n" },
+    { "§r", "ggVG:GpRewrite<cr>",                                                         desc = "Rewrite by GPT", mode = "n" },
+    { "§r", ":GpRewrite<cr>",                                                         desc = "Rewrite by GPT", mode = "v" },
+    { "§i", ":GpVnew<cr>",                                                            desc = "Rewrite by GPT", mode = "v" },
+    { "§e", ":GpCodeReview<cr>",                                                      desc = "Rewrite by GPT", mode = "v" },
+    { "§f", ":GpRewrite fix current code<cr>",                                        desc = "Rewrite by GPT", mode = "v" },
+    { "§t", ":GpUnitTests<cr>",                                                       desc = "Generate tests", mode = "v" },
+    { "§h", ":GpChatPaste<cr>i",                                                      desc = "Generate tests", mode = "v" },
+}

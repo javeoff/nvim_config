@@ -11,9 +11,7 @@ return {
 					name = "ChatGPT4",
 					chat = true,
 					command = false,
-					-- string with model name or table with model name and parameters
 					model = { model = "gpt-4o", temperature = 0.8, top_p = 1 },
-					-- system prompt (use this to specify the persona/role of the AI)
 					system_prompt = "You are a general AI assistant.\n\n"
 							.. "The user provided the additional info about how they would like you to respond:\n\n"
 							.. "- If you're unsure don't guess and say you don't know instead.\n"
@@ -28,9 +26,7 @@ return {
 					name = "ChatGPT3-5",
 					chat = true,
 					command = false,
-					-- string with model name or table with model name and parameters
 					model = { model = "gpt-3.5-turbo-1106", temperature = 1.1, top_p = 1 },
-					-- system prompt (use this to specify the persona/role of the AI)
 					system_prompt = "You are a general AI assistant.\n\n"
 							.. "The user provided the additional info about how they would like you to respond:\n\n"
 							.. "- If you're unsure don't guess and say you don't know instead.\n"
@@ -46,9 +42,7 @@ return {
 					name = "CodeGPT4o",
 					chat = false,
 					command = true,
-					-- string with model name or table with model name and parameters
 					model = { model = "gpt-4o", temperature = 0.8, top_p = 1 },
-					-- system prompt (use this to specify the persona/role of the AI)
 					system_prompt = require("gp.defaults").code_system_prompt,
 				},
 				{
@@ -56,18 +50,14 @@ return {
 					name = "CodeGPT4o-mini",
 					chat = false,
 					command = true,
-					-- string with model name or table with model name and parameters
 					model = { model = "gpt-4o-mini", temperature = 0.7, top_p = 1 },
-					-- system prompt (use this to specify the persona/role of the AI)
 					system_prompt = "Please return ONLY code snippets.\nSTART AND END YOUR ANSWER WITH:\n\n```",
 				},
 				{
 					name = "CodeGPT4",
 					chat = false,
 					command = true,
-					-- string with model name or table with model name and parameters
 					model = { model = "gpt-4-1106-preview", temperature = 0.8, top_p = 1 },
-					-- system prompt (use this to specify the persona/role of the AI)
 					system_prompt = "You are an AI working as a code editor.\n\n"
 							.. "Please AVOID COMMENTARY OUTSIDE OF THE SNIPPET RESPONSE.\n"
 							.. "START AND END YOUR ANSWER WITH:\n\n```",
@@ -76,9 +66,7 @@ return {
 					name = "CodeGPT3-5",
 					chat = false,
 					command = true,
-					-- string with model name or table with model name and parameters
 					model = { model = "gpt-3.5-turbo-1106", temperature = 0.8, top_p = 1 },
-					-- system prompt (use this to specify the persona/role of the AI)
 					system_prompt = "You are an AI working as a code editor.\n\n"
 							.. "Please AVOID COMMENTARY OUTSIDE OF THE SNIPPET RESPONSE.\n"
 							.. "START AND END YOUR ANSWER WITH:\n\n```",
@@ -97,8 +85,6 @@ return {
 					local template = "I have the following code from {{filename}}:\n\n"
 							.. "```{{filetype}}\n{{selection}}\n```\n\n"
 							.. "Please analyze for code smells and suggest improvements like Senior typescript engineer. Explain in russian."
-					-- local agent = gp.get_chat_agent()
-					-- gp.Prompt(params, gp.Target.tabnew("markdown"), nil, agent.model, template, agent.system_prompt)
 					local agent = gp.get_command_agent()
 					gp.Prompt(params, gp.Target.vnew, agent, template)
 				end,
@@ -110,7 +96,6 @@ return {
 					gp.Prompt(params, gp.Target.tabnew("markdown"), nil, agent.model, template, agent.system_prompt)
 				end,
 				BufferChatNew = function(gp, _)
-					-- call GpChatNew command in range mode on whole buffer
 					vim.api.nvim_command("%" .. gp.config.cmd_prefix .. "ChatPaste")
 					vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc><Esc>", true, false, true), 'n', false)
 					vim.api.nvim_put({ "Whats wrong with this code? Respond like Senior typescript engineer. Explain in russian" },
@@ -130,31 +115,10 @@ return {
 					local template = "I have the following code from {{filename}}:\n\n"
 							.. "```{{filetype}}\n{{selection}}\n```\n\n"
 							.. "Please respond by writing Typedoc documentation for the code above.\n\n"
-					-- .. "\n\nFor function and methods provide just declaration - no word description necessary."
 					gp.Prompt(params, gp.Target.enew, nil, gp.config.command_model, template, gp.config.command_system_prompt)
 				end,
 			}
 		})
-		require('which-key').add({
-			{ "§§",       ":GpChatFinder<cr><Esc>",                   desc = "Find GPT chat",        mode = "n" },
-			{ "§n",       ":GpChatNew<cr>:GpAgent ChatGPT4<cr>", desc = "Create GPT-4 chat",    mode = "n" },
-			{ "§3",       ":GpChatNew<cr>",                      desc = "Create GPT-4 chat",    mode = "n" },
-			{ "§4",       ":GpChatNew<cr>:GpAgent ChatGPT4<cr>", desc = "Start GPT chat",       mode = "n" },
-			{ "§=",       ":GpAppend<cr>",                       desc = "Append to GPT prompt", mode = "n" },
-			{ "§p",       ":GpPopup<cr>",                       desc = "Append to GPT prompt", mode = "n" },
-			{ "§m", ":GpChatRespond<cr>",                  desc = "",                     mode = "n" },
-			{ "§c", "ggVG:GpRewrite remove comments<cr>",                                        desc = "Rewrite by GPT", mode = "n" },
-			{ "§r", "ggVG:GpRewrite<cr>",                                                         desc = "Rewrite by GPT", mode = "n" },
-		})
-
-		require('which-key').add({
-			{ "§r", ":GpRewrite<cr>",                                                         desc = "Rewrite by GPT", mode = "v" },
-			{ "§i", ":GpVnew<cr>",                                                            desc = "Rewrite by GPT", mode = "v" },
-			{ "§e", ":GpCodeReview<cr>",                                                      desc = "Rewrite by GPT", mode = "v" },
-			-- { "§s", ":GpRewrite translate from russian to english or english to russian<cr>", desc = "Rewrite by GPT", mode = "v" },
-			{ "§f", ":GpRewrite fix current code<cr>",                                        desc = "Rewrite by GPT", mode = "v" },
-			{ "§t", ":GpUnitTests<cr>",                                                       desc = "Generate tests", mode = "v" },
-			{ "§h", ":GpChatPaste<cr>i",                                                      desc = "Generate tests", mode = "v" },
-		})
+		require('which-key').register(require('plugins.gpt.keybindings'), { prefix = "<leader>" })
 	end,
 }
