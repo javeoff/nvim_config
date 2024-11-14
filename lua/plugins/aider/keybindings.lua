@@ -15,10 +15,10 @@ local aider_mappings = {
         name = "Aider",
         ["<CR>"] = { ":AiderRun<CR>i", "Run Aider" },
         ["v"] = { ":AiderSilentAddCurrentFile<CR>:AiderVoice<CR>", "Add current file (silent)" },
-        ["."] = { ":AiderSilentAddCurrentFile<CR>", "Add current file (silent)" },
+        ["i"] = { ":AiderAddCurrentFile<CR>i", "Add current file (silent)" },
         ["o"] = { ":AiderAddCurrentFile<CR>i", "Add current file" },
         ["c"] = { ":AiderToggleCodeMode<CR>i", "Toggle code mode" },
-        ["i"] = { ":AiderPaste<CR>", "Paste" },
+        -- ["i"] = { ":AiderPaste<CR>", "Paste" },
         ["h"] = { ":AiderHide<CR>", "Hide Aider" },
         ["av"] = { ":AiderVisualTextWithPrompt<CR>", "Add visual selection" },
     }
