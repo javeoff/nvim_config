@@ -1,6 +1,6 @@
 # Neovim config docs
 
-Docs: https://nvim-config.gitbook.io/docs
+[Docs](https://nvim-config.gitbook.io/docs)
 
 ## Features
 
