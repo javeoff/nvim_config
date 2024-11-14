@@ -93,6 +93,17 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/javeoff/nvim_config/main
 - `ska` - Show the list of available code actions
 - `skf` - Show the available diagnostic informations
 
+### Aider (AI Assistant)
+
+- `§<CR>` - Run Aider
+- `§v` - Add current file (silent)
+- `§.` - Add current file (silent)
+- `§o` - Add current file
+- `§c` - Toggle code mode
+- `§i` - Paste
+- `§h` - Hide Aider
+- `§av` - Add visual selection
+
 ### Additional Keybindings
 
 #### General Keybindings
