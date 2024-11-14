@@ -21,6 +21,21 @@ return {
 			},
 		}
 
+		local modes = {
+			{
+				name = "Code",
+				command = ":AiderSilentSendPromptByCommandline '/chat-mode code'"
+			},
+			{
+				name = "Ask",
+				command = ":AiderSilentSendPromptByCommandline '/chat-mode ask'"
+			},
+			{
+				name = "Architect",
+				command = ":AiderSilentSendPromptByCommandline '/chat-mode architect'"
+			},
+		}
+
 		local commands = {
 			{
 				name = "Gemini",
@@ -76,5 +91,18 @@ return {
 				end
 			end)
 		end, { desc = "Select model" })
+
+		vim.keymap.set('n', '§,', function()
+			vim.ui.select(modes, {
+				prompt = "Choose mode:",
+				format_item = function(item)
+					return item.name
+				end
+			}, function(choice)
+				if choice then
+					vim.cmd(choice.command)
+				end
+			end)
+		end, { desc = "Select mode" })
 	end
 }
