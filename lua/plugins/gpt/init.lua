@@ -2,6 +2,7 @@ return {
 	'Robitx/gp.nvim',
 	enabled = true,
 	config = function()
+		require('plugins/gpt/keybindings')
 		require('gp').setup({
 			openai_api_key = os.getenv("OPENAI_API_KEY"),
 			chat_assistant_prefix = { "AI:", "[{{agent}}]" },
@@ -119,6 +120,5 @@ return {
 				end,
 			}
 		})
-		require('which-key').register(require('plugins.gpt.keybindings'), { prefix = "<leader>" })
 	end,
 }
