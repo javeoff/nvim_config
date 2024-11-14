@@ -9,14 +9,11 @@ return {
 
         -- Добавляем список команд
         local commands = {
-            "Команда 1",
-            "Команда 2",
-            "Команда 3",
-            "Команда 4",
-            "Команда 5"
+            ":AiderSilentSendPromptByCommandline /model openrouter/anthropic/claude-3-haiku",
+            ":AiderSilentSendPromptByCommandline /model openrouter/openai/chatgpt-4o-latest",
         }
 
-        vim.keymap.set('n', '<leader>c', function()
+        vim.keymap.set('n', '§.', function()
             vim.ui.select(commands, {
                 prompt = "Выберите команду:",
                 format_item = function(item)
