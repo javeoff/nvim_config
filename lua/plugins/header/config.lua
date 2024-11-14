@@ -20,11 +20,11 @@ vim.api.nvim_create_autocmd(
         end
         print(getCount())
 
-        -- if getCount() <= 1 then
+        if getCount() <= 2 then
           vim.cmd("set showtabline=0")
-        -- else
-        --   vim.cmd("set showtabline=2")
-        -- end
+        else
+          vim.cmd("set showtabline=2")
+        end
       end, 1)
     end,
   }

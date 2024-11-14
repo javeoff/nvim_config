@@ -15,11 +15,19 @@ return {
 			{ "<Tab>h", "<C-w>h", mode = "n" },
 			{ "vaa", "ggVG", desc = "Select all", mode = "n" },
 			{ "U", ":redo<cr>", desc = "Redo", mode = "n" },
+			{ "<C-k>", ":tabnext<cr>", desc = "Next tab", mode = "n" }, 
+			{ "<C-j>", ":tabprevious<cr>", desc = "Previous tab", mode = "n" }, 
+			-- { "<C-l>", ":bnext<cr>", desc = "Next buffer", mode = "n" },
+      -- { "<C-h>", ":bprevious<cr>", desc = "Previous buffer", mode = "n" },
 		})
 
 		require('which-key').add({
 			{ "jk", "<Esc>", desc = "Exit from insert mode", mode = "i" },
 			{ "kj", "<Esc>", desc = "Exit from insert mode", mode = "i" },
+			{ "<C-l>", "<Esc>la", desc = "Next symbol", mode = "i" }, 
+			{ "<C-h>", "<Esc>ha", desc = "Previous symbol", mode = "i" }, 
+			{ "<C-w>", "<Esc>wa", desc = "Next symbol", mode = "i" },
+      { "<C-b>", "<Esc>ba", desc = "Previous symbol", mode = "i" },
 		})
 
 	end

@@ -10,12 +10,11 @@ return {
 		require('plugins/header/config')
 	end,
 	keys = {
-    {"<M-d>", "<cmd>lua require('wintabs').close()<CR>", desc = "Delete buffer"},
-    {"<M-D>", "<cmd>lua require('wintabs').close_vimtab()<CR>", desc = "Delete tab"},
-    {"<M-n>", "<cmd>tabnew<CR>", desc = "Create new tab"},
-    {"<M-l>", "<cmd>lua require('wintabs').next()<CR>", desc = "Next buffer"},
-    {"<M-h>", "<cmd>lua require('wintabs').previous()<CR>", desc = "Prev buffer"},
-    {"<M-k>", "<cmd>tabnext<CR>", desc = "Next tab"},
-    {"<M-j>", "<cmd>tabprevious<CR>", desc = "Prev tab"},
+    {"<C-c>", "<cmd>WintabsCloseVimtab<CR>", desc = "Delete buffer"},
+    {"<C-x>", "<cmd>WintabsClose<CR>", desc = "Delete tab"},
+    {"<C-n>", "<cmd>tabnew<CR>", desc = "Create new tab"},
+    {"<C-l>", "<cmd>WintabsNext<CR>", desc = "Next buffer"},
+    {"<C-h>", "<cmd>WintabsPrev<CR>", desc = "Prev buffer"},
+    {"<C-CR>", "<cmd>WintabsAll<CR>", desc = "Enable all buffers"},
 	}
 }
