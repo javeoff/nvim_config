@@ -4,9 +4,9 @@ return {
 	enabled = true,
 	config = function()
 		vim.g.aider_command = 'aider'
-		vim.g.aider_buffer_open_type = 'tab'
+		vim.g.aider_buffer_open_type = 'vsplit'
 		vim.g.aider_floatwin_width = 100
-		vim.g.aider_floatwin_height = 20
+		vim.g.aider_floatwin_height = 50
 
 		vim.api.nvim_create_autocmd('User',
 			{
@@ -17,14 +17,14 @@ return {
 							vim.keymap.set('n', '<Esc>', '<cmd>AiderHide<CR>', { buffer = args.buf })
 						end
 			})
-		vim.api.nvim_set_keymap('n', '§<Enter>', ':Aider<CR>', { noremap = true, silent = true })
-		vim.api.nvim_set_keymap('n', '§p', ':AiderRun<CR>i', { noremap = true, silent = true })
+		-- vim.api.nvim_set_keymap('n', '§<Enter>', ':Aider<CR>', { noremap = true, silent = true })
+		vim.api.nvim_set_keymap('n', '§<CR>', ':AiderRun<CR>i', { noremap = true, silent = true })
 		vim.api.nvim_set_keymap('n', '§v', ':AiderSilentAddCurrentFile<CR>:AiderVoice<CR>', { noremap = true, silent = false })
-		vim.api.nvim_set_keymap('n', '§.', ':AiderSilentAddCurrentFile<CR><CR>:AiderSilentSendPromptByCommandline "/model openrouter/meta-llama/llama-3-8b-instruct:free"<CR>:AiderVoice<CR>', { noremap = true, silent = false })
+		vim.api.nvim_set_keymap('n', '§.', ':AiderSilentAddCurrentFile<CR>', { noremap = true, silent = false })
 		vim.api.nvim_set_keymap('n', '§o', ':AiderAddCurrentFile<CR>i', { noremap = true, silent = true })
 		vim.api.nvim_set_keymap('n', '§c', ':AiderToggleCodeMode<CR>i', { noremap = true, silent = true })
-		vim.api.nvim_set_keymap('n', '§aI', ':AiderPaste<CR>', { noremap = true, silent = true })
-		vim.api.nvim_set_keymap('n', '§ah', ':AiderHide<CR>', { noremap = true, silent = true })
+		vim.api.nvim_set_keymap('n', '§i', ':AiderPaste<CR>', { noremap = true, silent = true })
+		vim.api.nvim_set_keymap('n', '§h', ':AiderHide<CR>', { noremap = true, silent = true })
 		vim.api.nvim_set_keymap('v', '§av', ':AiderVisualTextWithPrompt<CR>', { noremap = true, silent = true })
 	end
 }
