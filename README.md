@@ -133,6 +133,23 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/javeoff/nvim_config/main
 - `sn` - Toggle file outline
 - `z<Tab>` - Set fold level to the first level
 
+#### Gitsigns Keybindings
+
+- `g<Tab>` - Toggle line blame hints
+- `gss` - Stage current hunk
+- `gsf` - Stage current buffer
+- `gsu` - Undo stage hunk
+- `gsl` - Preview current hunk
+- `gsL` - Stage line hunk
+
+- `<Tab>g` - Blame current line
+- `<Tab>b` - Blame current file
+
+#### Illuminate Keybindings
+
+- `n` - Go to next highlighted reference
+- `N` - Go to previous highlighted reference
+
 ## Documentation
 
 https://nvim-config.gitbook.io/docs
