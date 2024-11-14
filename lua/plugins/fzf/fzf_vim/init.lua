@@ -6,20 +6,6 @@ return {
 	config = function()
 		require('plugins/fzf/fzf_vim/config')
 		require('plugins/fzf/fzf_vim/keybindings')
-		local models = {
-			{
-				name = "Code",
-				command = ":AiderSilentSendPromptByCommandline '/chat-mode code'"
-			},
-			{
-				name = "Ask",
-				command = ":AiderSilentSendPromptByCommandline '/chat-mode ask'"
-			},
-			{
-				name = "Architect",
-				command = ":AiderSilentSendPromptByCommandline '/chat-mode architect'"
-			},
-		}
 
 		local modes = {
 			{

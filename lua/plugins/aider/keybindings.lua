@@ -11,14 +11,14 @@ vim.api.nvim_create_autocmd('User',
 	})
 
 local aider_mappings = {
-	["§<CR>"] = { ":AiderRun<CR>i", "Run Aider" },
-	["§v"] = { ":AiderSilentAddCurrentFile<CR>:AiderVoice<CR>", "Add current file (silent)" },
-	["§i"] = { ":AiderAddCurrentFile<CR>i", "Add current file (silent)" },
-	["§o"] = { ":AiderAddCurrentFile<CR>i", "Add current file" },
-	["§c"] = { ":AiderToggleCodeMode<CR>i", "Toggle code mode" },
-	-- ["i"] = { ":AiderPaste<CR>", "Paste" },
-	["§h"] = { ":AiderHide<CR>", "Hide Aider" },
-	["§av"] = { ":AiderVisualTextWithPrompt<CR>", "Add visual selection" },
+	{ "§<CR>", ":AiderRun<CR>i", desc = "Run Aider" },
+	{ "§v", ":AiderSilentAddCurrentFile<CR>:AiderVoice<CR>", desc = "Add current file (silent)" },
+	{ "§i", ":AiderAddCurrentFile<CR>i", desc = "Add current file (silent)" },
+	{ "§o", ":AiderAddCurrentFile<CR>i", desc = "Add current file" },
+	{ "§c", ":AiderToggleCodeMode<CR>i", desc = "Toggle code mode" },
+	-- { "i", ":AiderPaste<CR>", desc = "Paste" },
+	{ "§h", ":AiderHide<CR>", desc = "Hide Aider" },
+	{ "§av", ":AiderVisualTextWithPrompt<CR>", desc = "Add visual selection" },
 }
 
-wk.register(aider_mappings)
+wk.add(aider_mappings)
