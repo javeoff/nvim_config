@@ -59,4 +59,12 @@ return {
 		local agent = gp.get_chat_agent('Claude')
 		gp.Prompt(params, gp.Target.popup, agent, template)
 	end,
+	Repeat = function(gp, params)
+		local template = "I have the following code from {{filename}}:\n\n"
+				.. "```{{filetype}}\n{{selection}}\n```\n\n"
+				..
+				"Please rewrite the lines of code the same like the first line. "
+		local agent = gp.get_command_agent('Claude')
+		gp.Prompt(params, gp.Target.rewrite, agent, template)
+	end,
 }
