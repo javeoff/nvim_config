@@ -240,7 +240,7 @@ require'fzf-lua'.setup {
     grep = {
         prompt            = 'Rgg❯ ',
         input_prompt      = 'Grep For❯ ',
-        rg_opts           = "--hidden --no-heading --color=always --smart-case --glob '!node_modules/*' --glob '!dist/*' --glob '!pnpm-lock.yaml'",
+        rg_opts           = "--hidden --no-heading --color=always --smart-case --column --line-number --glob '!node_modules/*' --glob '!dist/*' --glob '!pnpm-lock.yaml'",
         cmd               = "rg",
         git_icons         = true,           -- show git icons?
         file_icons        = false,           -- show file icons?
@@ -255,16 +255,16 @@ require'fzf-lua'.setup {
     },
     grep_curbuf = {
         prompt = 'bufgrep ',
-        rg_opts = "--no-heading --color=always --smart-case",
+        rg_opts = "--column --line-number --no-heading --color=always --smart-case",
         preview = {
             hidden = 'hidden',
             layout = 'vertical',
         },
         winopts = {
-            win_height       = 0.80,            -- window height
-            win_width        = 0.80,            -- window width
-            win_row          = 0,            -- window row position (0=top, 1=bottom)
-            win_col          = 0.50,
+            height       = 0.80,            -- window height
+            width        = 0.80,            -- window width
+            row          = 0,            -- window row position (0=top, 1=bottom)
+            col          = 0.50,
         },
     },
     oldfiles = {
