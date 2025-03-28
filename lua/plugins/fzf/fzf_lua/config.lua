@@ -1,6 +1,5 @@
 local remap = vim.api.nvim_set_keymap
 local opts = { noremap=true, silent=true }
-silent = true,
 
 -- fzf
 --remap('n', '<C-f>', '<cmd>lua require("fzf-lua").files()<CR>', opts)
@@ -125,14 +124,6 @@ require'fzf-lua'.setup {
         ['--layout']      = 'reverse',
     },
     fzf_args            = vim.env.FZF_DEFAULT_OPTS, -- adv: fzf extra args, empty unless adv
-    preview_border      = 'border',       -- border|noborder
-    preview_wrap        = 'nowrap',       -- wrap|nowrap
-    preview_vertical    = 'up:50%',     -- up|down:size
-    preview_horizontal  = 'right:60%',    -- right|left:size
-    preview_layout      = 'horizontal',         -- horizontal|vertical|flex
-    preview_hidden      = 'hidden',
-    flip_columns        = 120,            -- #cols to switch to horizontal on flex
-    default_previewer   = "builtin",          -- override the default previewer?
     -- by default auto-detect bat|cat
     previewers = {
         bat = {
@@ -145,13 +136,17 @@ require'fzf-lua'.setup {
             title           = true,         -- preview title?
             scrollbar       = true,         -- scrollbar?
             scrollchar      = '█',          -- scrollbar character
-            syntax          = true,         -- preview syntax highlight?
-            syntax_limit_l  = 0,            -- syntax limit (lines), 0=nolimit
-            syntax_limit_b  = 1024*1024,    -- syntax limit (bytes), 0=nolimit
-            expand          = false,        -- preview max size?
-            hl_cursor       = 'Cursor',     -- cursor highlight
-            hl_cursorline   = 'Visual', -- cursor line highlight
-            hl_range        = 'IncSearch',  -- ranger highlight (not yet in use)
+            winopts = {
+                preview = {
+                    syntax          = true,         -- preview syntax highlight?
+                    syntax_limit_l  = 0,            -- syntax limit (lines), 0=nolimit
+                    syntax_limit_b  = 1024*1024,    -- syntax limit (bytes), 0=nolimit
+                    expand          = false,        -- preview max size?
+                    hl_cursor       = 'Cursor',     -- cursor highlight
+                    hl_cursorline   = 'Visual',     -- cursor line highlight
+                    hl_range        = 'IncSearch',  -- ranger highlight (not yet in use)
+                }
+            }
         },
     },
     -- provider setup
@@ -231,10 +226,10 @@ require'fzf-lua'.setup {
                 ["default"] = actions.git_switch,
             },
             winopts = {
-                win_height       = 0.40,            -- window height
-                win_width        = 0.30,            -- window width
-                win_row          = 0,            -- window row position (0=top, 1=bottom)
-                win_col          = 0.50,
+                height       = 0.40,            -- window height
+                width        = 0.30,            -- window width
+                row          = 0,               -- window row position (0=top, 1=bottom)
+                col          = 0.50,
             },
         },
         icons = {
@@ -250,7 +245,7 @@ require'fzf-lua'.setup {
     grep = {
         prompt            = 'Rgg❯ ',
         input_prompt      = 'Grep For❯ ',
-				rg_opts = "--hidden --column --line-number --no-heading --color=always --smart-case --glob '!node_modules/*' --glob '!dist/*' --glob '!pnpm-lock.yaml'",
+        rg_opts           = "--hidden --column --line-number --no-heading --color=always --smart-case --glob '!node_modules/*' --glob '!dist/*' --glob '!pnpm-lock.yaml'",
         cmd               = "rg",
         git_icons         = true,           -- show git icons?
         file_icons        = false,           -- show file icons?
@@ -260,7 +255,6 @@ require'fzf-lua'.setup {
             ["ctrl-S"]      = actions.file_split,
             ["ctrl-V"]      = actions.file_vsplit,
             ["ctrl-T"]      = actions.file_tabedit,
-            --["ctrl-Q"]      = actions.file_sel_to_qf,
             ["ctrl-y"]     = function(selected) print(selected[2]) end,
         }
     },
@@ -291,13 +285,15 @@ require'fzf-lua'.setup {
     },
     jumps = {
         prompt            = 'Jumps❯ ',
-        preview_layout      = 'vertical',         -- horizontal|vertical|flex
         winopts = {
-            preview = { hidden = "nohidden" },
-            win_height       = 0.40,            -- window height
-            win_width        = 1,            -- window width
-            win_row          = 1,            -- window row position (0=top, 1=bottom)
-            win_col          = 0.50,
+            preview = { 
+                hidden = "nohidden",
+                layout = 'vertical'
+            },
+            height       = 0.40,            -- window height
+            width        = 1,            -- window width
+            row          = 1,            -- window row position (0=top, 1=bottom)
+            col          = 0.50,
         },
     },
     lsp_references = {
