@@ -1,4 +1,4 @@
-local local_path = '~/'
+local local_path = '~/.config/nvim/'
 vim.g.UltiSnipsSnippetDirectories = {local_path .. 'snippets'}
 vim.g.UltiSnipsSnippetsDir = local_path .. 'snippets'
 

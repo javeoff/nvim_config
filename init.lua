@@ -5,9 +5,11 @@ local folders = {
 }
 
 local disabled_plugins = {
+	'sublime',
+	'monokai',
 	'sonokai',
-	'vimbrains',
-	-- 'matrix',
+	-- 'vimbrains',
+	'matrix',
 }
 
 

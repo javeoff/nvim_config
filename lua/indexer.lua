@@ -70,8 +70,6 @@ local function display_results(word_count)
     vim.api.nvim_buf_set_lines(0, 0, -1, false, results_to_display)
 end
 
-
-
 -- Основная функция плагина
 local function index_project()
     local files = get_project_files()

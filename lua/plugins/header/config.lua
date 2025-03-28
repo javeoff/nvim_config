@@ -1,7 +1,7 @@
 -- vim.cmd('highlight TabLine guibg='.. colors.bg ..' guifg=' .. colors.fg .. '')
 -- vim.cmd('highlight TabLineSel guibg=#ff5500 guifg=#ffffff')
 -- vim.cmd('highlight TabLineFill guibg=default guifg=' .. colors.fg .. '')
- 
+
 vim.api.nvim_create_autocmd(
   { "VimEnter", "BufNew", "BufReadPost", "BufDelete", "BufWipeout" },
   {
@@ -25,6 +25,8 @@ vim.api.nvim_create_autocmd(
         else
           vim.cmd("set showtabline=2")
         end
+        vim.cmd('highlight TabLineSel guibg=#222222 guifg=#ffffff')
+        vim.cmd('highlight TabLineFill guibg=none ctermbg=NONE guifg=#ffffff')
       end, 1)
     end,
   }

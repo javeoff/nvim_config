@@ -45,7 +45,7 @@ return {
 			},
 			{
 				name = "Claude 3.5 Sonnet",
-				command = ":AiderSilentSendPromptByCommandline /model anthropic/claude-3.5-sonnet"
+				command = ":AiderSilentSendPromptByCommandline /model openrouter/anthropic/claude-3.5-sonnet"
 			},
 			{
 				name = "GPT-4o",

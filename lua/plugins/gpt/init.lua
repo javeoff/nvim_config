@@ -9,6 +9,7 @@ return {
 			default_chat = 'Claude',
 			agents = require('plugins/gpt/agents'),
 			hooks = require('plugins/gpt/hooks'),
+			providers = require('plugins/gpt/providers'),
 		})
 	end,
 }

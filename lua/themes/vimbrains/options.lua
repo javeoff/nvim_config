@@ -101,6 +101,10 @@ vim.api.nvim_set_hl(
     }
 )
 
+-- vim.cmd('highlight TabLine guibg=#000000 guifg=#ffffff')
+vim.cmd('highlight TabLineSel guibg=#222222 guifg=#ffffff')
+vim.cmd('highlight TabLineFill guibg=none ctermbg=NONE guifg=#ffffff')
+
 --[[ vim.cmd('highlight Keyword guifg=#ff79c6')
 vim.cmd('highlight Type guifg=#bd93f9')
 vim.cmd('highlight Tag guifg=#ff79c6')

@@ -76,7 +76,7 @@ return {
 		provider = "openrouter",
 		chat = false,
 		command = true,
-		model = { model = "meta-llama/llama-3.1-70b-instruct:free" },
+		model = { model = "meta-llama/llama-3.1-8b-instruct:free" },
 		system_prompt = require("gp.defaults").code_system_prompt,
 	},
 }

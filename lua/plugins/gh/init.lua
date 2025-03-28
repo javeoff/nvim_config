@@ -1,4 +1,4 @@
-return {
+﻿return {
 	"ldelossa/gh.nvim",
 	dependencies = {
 		{

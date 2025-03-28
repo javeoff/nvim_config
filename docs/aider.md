@@ -1,4 +1,4 @@
-# Aider (AI Assistant)
+﻿# Aider (AI Assistant)
 
 ## Keybindings
 
