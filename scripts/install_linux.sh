@@ -1,4 +1,5 @@
-apt install build-essential git curl tar -y
+apt update
+apt install build-essential git curl python3-pip python3-pynvim tar -y
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
 rm -rf /opt/nvim
 tar -C /opt -xzf nvim-linux-x86_64.tar.gz
