@@ -257,6 +257,7 @@ require'fzf-lua'.setup {
     },
     grep_curbuf = {
         prompt = 'bufgrep ',
+        rg_opts = "--column --line-number --no-heading --color=always --smart-case",
         preview = {
             hidden = 'hidden',
             layout = 'vertical',
