@@ -5,7 +5,7 @@ require('which-key').add({
 })
 
 require('which-key').add({
-  { "sf", "<cmd>lua require('fzf-lua').files({ winopts = { height = 0.40, width = 0.4, row = 0.5, col = 0.5, preview = false }})<cr>", desc = "Files fzf menu", mode = "n" },
+  { "sf", "<cmd>lua require('fzf-lua').files()<cr>", desc = "Files fzf menu", mode = "n" },
   { "sg", "<cmd>FzfLua live_grep<cr>", desc = "Grep fzf menu", mode = "n" },
   { "su", "<cmd>FzfLua oldfiles<cr>", desc = "Oldfiles fzf menu", mode = "n" },
   -- { "st", "<cmd>FzfLua tabs<cr>", desc = "Show tabs menu", mode = "n" },
