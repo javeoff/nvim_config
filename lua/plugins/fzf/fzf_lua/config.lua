@@ -1,5 +1,6 @@
 local remap = vim.api.nvim_set_keymap
 local opts = { noremap=true, silent=true }
+silent = true,
 
 -- fzf
 --remap('n', '<C-f>', '<cmd>lua require("fzf-lua").files()<CR>', opts)
@@ -57,23 +58,23 @@ remap('n', 'gm', '<cmd>lua require("fzf-lua").git_branches()<CR>', opts)
 
 local actions = require "fzf-lua.actions"
 require'fzf-lua'.setup {
-    winopts = {
-        height       = 0.40,            -- window height
-        width        = 1,               -- window width
-        row          = 1,               -- window row position (0=top, 1=bottom)
-        col          = 0.50,            -- window col position (0=left, 1=right)
-        border       = { '', '─', '', '', '│', '', '', '' },
-        preview = {
-            hidden       = 'hidden',
-            wrap         = 'nowrap',
-            border       = 'border',
-            vertical     = 'up:50%',
-            horizontal   = 'right:60%',
-            layout       = 'horizontal',
-            title        = true,
-            scrollbar    = true,
-            scrollchar   = '█',
-        },
+    height       = 0.40,            -- window height
+    width        = 1,               -- window width
+    row          = 1,               -- window row position (0=top, 1=bottom)
+    col          = 0.50,            -- window col position (0=left, 1=right)
+    border       = { '', '─', '', '', '│', '', '', '' },
+    preview = {
+        hidden       = 'hidden',
+        wrap         = 'nowrap',
+        border       = 'border',
+        vertical     = 'up:50%',
+        horizontal   = 'right:60%',
+        layout       = 'horizontal',
+        title        = true,
+        scrollbar    = true,
+        scrollchar   = '█',
+        flip_columns = 120,
+        default      = "builtin",
     },
     hls = {
         normal     = 'Normal',
