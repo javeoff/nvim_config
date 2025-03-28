@@ -3,7 +3,7 @@ return {
     dependencies = {
 			'hrsh7th/nvim-cmp',
 		},
-		commit = '8c4512d',
+		-- commit = '8c4512d',
 		priority = 49,
 		lazy = true,
 		build = './install.sh',

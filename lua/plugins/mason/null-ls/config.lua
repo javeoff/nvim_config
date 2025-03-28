@@ -22,7 +22,7 @@ require("mason-null-ls").setup({
         'cfn_lint', -- yaml + json
 
         -- Json
-        'fixjson',
+        -- 'fixjson',
         'jq',
 
         -- Lua
