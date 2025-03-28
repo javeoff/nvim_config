@@ -22,9 +22,6 @@ return {
 
     foldmethod = 'expr';
     encoding = 'utf-8';
-    -- termencoding = 'utf-8';
-    fileencoding = 'utf-8';
-    makeencoding = 'utf-8';
     bomb = true;
     guifont = 'Monaco:h10';
 }
