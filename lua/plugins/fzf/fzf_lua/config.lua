@@ -133,9 +133,6 @@ require'fzf-lua'.setup {
             config          = nil,               -- nil uses $BAT_CONFIG_PATH
         },
         builtin = {
-            title           = true,         -- preview title?
-            scrollbar       = true,         -- scrollbar?
-            scrollchar      = '█',          -- scrollbar character
             winopts = {
                 preview = {
                     syntax          = true,         -- preview syntax highlight?
