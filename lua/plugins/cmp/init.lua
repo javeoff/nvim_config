@@ -3,7 +3,6 @@ return {
     'hrsh7th/nvim-cmp',
     event = "InsertEnter",
     dependencies = {
-        { "tzachar/cmp-tabnine", build = "./install.sh" },
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-cmdline',
         'hrsh7th/cmp-path',
@@ -19,7 +18,6 @@ return {
 
 			require 'cmp'.setup.buffer {
 				sources = require 'cmp'.config.sources(
-					{ name = 'cmp_tabnine' },
 					{ name = 'conventionalcommits' },
 					{ name = 'buffer' }
 				),
@@ -29,14 +27,12 @@ return {
 			local local_path = 'plugins/cmp/'
 			local cmp = require("cmp")
 			local compare = require('cmp.config.compare')
-			local tabnine_compare = require('cmp_tabnine.compare')
 			cmp.setup({
 				completion = {
 					completeopt = "menu,menuone,noselect,noinsert",
 				},
 				sources = {
 					{ name = 'ultisnips' },
-					{ name = 'cmp_tabnine' },
 					{ name = 'npm',                    keyword_length = 4 },
 					{ name = 'nvim_lsp' },
 					{ name = 'cmp_cmdline' },
@@ -53,7 +49,6 @@ return {
 				sorting = {
 					priority_weight = 2,
 					comparators = {
-						tabnine_compare,
 						compare.offset,
 						compare.exact,
 						compare.score,
