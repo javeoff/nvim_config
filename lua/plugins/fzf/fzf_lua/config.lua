@@ -64,12 +64,22 @@ require'fzf-lua'.setup {
         col          = 0.50,            -- window col position (0=left, 1=right)
         border       = { '', '─', '', '', '│', '', '', '' },
         preview = {
-            hidden = 'hidden',
+            hidden       = 'hidden',
+            wrap         = 'nowrap',
+            border       = 'border',
+            vertical     = 'up:50%',
+            horizontal   = 'right:60%',
+            layout       = 'horizontal',
+            title        = true,
+            scrollbar    = true,
+            scrollchar   = '█',
         },
     },
     hls = {
-        normal = 'Normal',
-        border = 'Default',
+        normal     = 'Normal',
+        border     = 'Default',
+        cursor     = 'Cursor',
+        cursorline = 'Visual',
     },
     silent = true,
     keymap = {
@@ -145,15 +155,15 @@ require'fzf-lua'.setup {
     -- provider setup
     changes = {
         prompt = 'changes ',
-        preview = {
-            hidden = 'hidden',
-            layout = 'vertical',
-        },
         winopts = {
-            win_height       = 0.80,            -- window height
-            win_width        = 0.80,            -- window width
-            win_row          = 0,            -- window row position (0=top, 1=bottom)
-            win_col          = 0.50,
+            height       = 0.80,            -- window height
+            width        = 0.80,            -- window width
+            row          = 0,               -- window row position (0=top, 1=bottom)
+            col          = 0.50,
+            preview = {
+                hidden = 'hidden',
+                layout = 'vertical',
+            },
         },
     },
     files = {
