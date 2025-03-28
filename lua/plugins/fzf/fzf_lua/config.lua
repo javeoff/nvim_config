@@ -1,4 +1,4 @@
-local remap = vim.api.nvim_set_keymap
+﻿local remap = vim.api.nvim_set_keymap
 local opts = { noremap=true, silent=true }
 
 -- fzf
@@ -81,7 +81,6 @@ require'fzf-lua'.setup {
         cursor     = 'Cursor',
         cursorline = 'Visual',
     },
-    silent = true,
     keymap = {
         builtin = {
             -- neovim `:tmap` mappings for the fzf win
@@ -111,7 +110,6 @@ require'fzf-lua'.setup {
         },
     },
     -- fzf_bin             = 'sk',        -- use skim instead of fzf?
-    silent = true,
     fzf_opts = {
         -- options are sent as `<left>=<right>`
         -- set to `false` to remove a flag
@@ -242,7 +240,7 @@ require'fzf-lua'.setup {
     grep = {
         prompt            = 'Rgg❯ ',
         input_prompt      = 'Grep For❯ ',
-        rg_opts           = "--hidden --column --line-number --no-heading --color=always --smart-case --glob '!node_modules/*' --glob '!dist/*' --glob '!pnpm-lock.yaml'",
+        rg_opts           = "--hidden --no-heading --color=always --smart-case --glob '!node_modules/*' --glob '!dist/*' --glob '!pnpm-lock.yaml'",
         cmd               = "rg",
         git_icons         = true,           -- show git icons?
         file_icons        = false,           -- show file icons?
@@ -257,7 +255,7 @@ require'fzf-lua'.setup {
     },
     grep_curbuf = {
         prompt = 'bufgrep ',
-        rg_opts = "--column --line-number --no-heading --color=always --smart-case",
+        rg_opts = "--no-heading --color=always --smart-case",
         preview = {
             hidden = 'hidden',
             layout = 'vertical',
