@@ -43,4 +43,14 @@ require'fzf-lua'.setup {
             ["ctrl-A"]          = "toggle-all",
         },
     },
+    files = {
+        -- Center the window with smaller width
+        winopts = {
+            height = 0.40,
+            width = 0.4,
+            row = 0.5,
+            col = 0.5,
+            preview = false,
+        },
+    },
 }
