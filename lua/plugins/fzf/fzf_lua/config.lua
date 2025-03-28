@@ -58,20 +58,20 @@ remap('n', 'gm', '<cmd>lua require("fzf-lua").git_branches()<CR>', opts)
 local actions = require "fzf-lua.actions"
 require'fzf-lua'.setup {
     winopts = {
-        -- split         = "new",           -- open in a split instead?
-        win_height       = 0.40,            -- window height
-        win_width        = 1,            -- window width
-        win_row          = 1,            -- window row position (0=top, 1=bottom)
-        win_col          = 0.50,            -- window col position (0=left, 1=right)
-        --win_border    = false,           -- window border? or borderchars?
-        --win_border       = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
-        win_border       = { '', '─', '', '', '│', '', '', '' },
-        hl_normal        = 'Normal',        -- window normal color
-        hl_border        = 'Default',   -- window border color
+        height       = 0.40,            -- window height
+        width        = 1,               -- window width
+        row          = 1,               -- window row position (0=top, 1=bottom)
+        col          = 0.50,            -- window col position (0=left, 1=right)
+        border       = { '', '─', '', '', '│', '', '', '' },
         preview = {
             hidden = 'hidden',
         },
     },
+    hls = {
+        normal = 'Normal',
+        border = 'Default',
+    },
+    silent = true,
     keymap = {
         builtin = {
             -- neovim `:tmap` mappings for the fzf win
