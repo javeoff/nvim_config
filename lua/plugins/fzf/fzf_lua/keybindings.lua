@@ -10,7 +10,7 @@ require('which-key').add({
   { "su", "<cmd>lua require('fzf-lua').oldfiles({ winopts = { preview = { layout = 'horizontal', horizontal = 'right:50%' }, border = { ' ', ' ', ' ', ' ', '│', ' ', ' ', ' ' } } })<cr>", desc = "Oldfiles fzf menu", mode = "n" },
   -- { "st", "<cmd>FzfLua tabs<cr>", desc = "Show tabs menu", mode = "n" },
   { "sc", "<cmd>lua require('fzf-lua').changes()<cr>", desc = "Changes", mode = "n" },
-  { "sj", "<cmd>lua require('fzf-lua').jumps({ winopts = { height = 1.0, width = 0.3, row = 0, col = 0, preview = false, border = 'none' } })<cr>", desc = "Jumps", mode = "n" },
+  { "sj", "<cmd>lua require('fzf-lua').jumps({ winopts = { height = 1.0, width = 0.3, row = 0, col = 0, preview = { hidden = false }, border = 'none' } })<cr>", desc = "Jumps", mode = "n" },
   { "slr", "<cmd>lua require('fzf-lua').lsp_references()<cr>", desc = "LSP References", mode = "n" },
   { "s/", "<cmd>FzfLua resume<cr>", desc = "Resume fzf-lua filter", mode = "n" },
   { "si", "<cmd>FzfLua blines<cr>", desc = "Lines in loaded buffers", mode = "n" },
