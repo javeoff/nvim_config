@@ -111,6 +111,7 @@ require'fzf-lua'.setup {
         },
     },
     -- fzf_bin             = 'sk',        -- use skim instead of fzf?
+    silent = true,
     fzf_opts = {
         -- options are sent as `<left>=<right>`
         -- set to `false` to remove a flag
